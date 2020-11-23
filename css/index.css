@@ -1,0 +1,65 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #7159c1;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+}
+
+img {
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+h4 {
+    text-align: center;
+    color: white;
+}
+
+button {
+    justify-content: center;
+    
+}
+
+.imagem {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.presentation {
+    height: 100vh;
+    width: 100vw;   
+}
+
+.about {
+    background: blue;
+    height: 100vh;
+    width: 100vw;
+}
+
+.staff {
+    background: red;
+    height: 100vh;
+    width: 100vw;
+}
+
+.contact {
+    background: orange;
+    height: 100vh;
+    width: 100vw;
+}
+
+footer{
+    height: 10vh;
+    width: 100vw;
+    background: green;
+}
