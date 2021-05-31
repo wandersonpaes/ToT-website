@@ -327,6 +327,12 @@ footer{
     
     }
 
+    .imageTeam {
+        display: block;
+        width: 335px;
+        height: 190px;
+    }
+
     .containerAbout {
         width: 90vw;
         height: 200vh;
