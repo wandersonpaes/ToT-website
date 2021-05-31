@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
 html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    background-color: #F1F1F1;
 }
 
 header {
@@ -17,6 +21,7 @@ header {
     flex-wrap: wrap;
     margin: 0 auto;
     margin-top: 15vh;
+    margin-bottom: 40px;
     height: 408px;
     width: 408;
     
@@ -27,6 +32,14 @@ h4 {
     text-align: center;
     color: white;
     margin-top: 50px;
+    font-size: 1.4rem;
+    font-family: 'Roboto';
+    font-style: italic;
+}
+
+h1 {
+    font-size:2rem;
+    margin-bottom:10px;
 }
 
 .container2 {
@@ -35,7 +48,7 @@ h4 {
     grid-gap: 5px;
 }
 
-.container2 > button {
+.container2 > a, button {
     width: 100px;
     height: 50px;
     
@@ -49,6 +62,7 @@ h4 {
 #button2 {
     justify-self: start;
     align-self: start;
+    margin-left: 10px;
 }
 
 .container {
@@ -75,8 +89,63 @@ h4 {
 }
 
 .about {
-    background: blue;
     width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+
+}
+
+.imageAbout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+}
+
+.imageTeam {
+    display: block;
+    width: 670px;
+    height: 380px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #F1F1F1;
+  }
+  
+  .imageAbout:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+.containerAbout {
+    width: 70vw;
     height: 100vh;
 
     display: grid;
@@ -87,24 +156,225 @@ h4 {
     grid-gap: 5px;
 }
 
-.about > div {
-    background: black;
+.containerAboutHeader {
+    margin-top: 50px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.containerAboutHeader > h4 {
+    color: black;
 }
 
 .staff {
-    background: red;
     height: 100vh;
     width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.staff > h4 {
+    color: black;
+    margin-top: 10px;
+}
+
+.staff > h1 {
+    margin-bottom: 0px;
+}
+
+iframe {
+    margin-top: 50px;
 }
 
 .contact {
-    background: orange;
     height: 100vh;
     width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactMenssage > h4 {
+    display: flex;
+
+    align-self:flex-start;
+
+    margin-left:15px;
+    margin-bottom: 5px;
+    margin-top:10px;
+    font-size: 1.1rem;
+
+    color: black;
+}
+
+.contactMenssage {
+    width: 700px;
+    height: 60vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactInSmall {
+    width: 700px;
+    height: 25px;
+
+    border-radius: 5px;
+}
+
+.contactInBig {
+    width: 700px;
+    height: 200px;
+
+    border-radius: 5px;
+}
+
+#button3 {
+    margin-top: 15px;
+
+    text-decoration: none;
+    border-radius: 5px;
+    width:100px;
+    height:50px;
+    font-size:20px;
+    background-color: #006A99;
+    color: white;
+
+    cursor: pointer;
+    transition: all .3s;
+
+    position: relative;
+
+}
+
+#button3:hover {
+    opacity: .8;
+    transform: translateX(2px);
+}
+
+.contactInfo {
+    width: 800px;
+    height: 20vh;
+
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactInfo > h4 {
+    margin-top:15px;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.contactInfo > h1 {
+    margin-top: 35px;
 }
 
 footer{
     height: 10vh;
     width: 100vw;
-    background: green;
+    background: #006A99;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+@media only screen and (max-width: 850px) {
+    #imagem1 {
+        align-items: center;
+        justify-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-top: 15vh;
+        height: 208px;
+        width: 208;
+        
+    }
+
+    h4 {
+        text-justify: center;
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+        font-size: 1.3rem;
+        font-family: 'Roboto';
+        font-style: italic;
+        
+    }
+
+    h1 {
+        font-size:1.6rem;
+        margin-bottom:10px;
+    }
+
+    .about {
+        width: 100vw;
+        height: 200vh;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .containerAbout {
+        width: 90vw;
+        height: 200vh;
+    
+        display: grid;
+        
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    
+        grid-gap: 5px;
+    }
+
+    .containerAboutHeader {
+        margin-top: 70px;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    .contactMenssage {
+        width: 70vw;
+        height: 60vh;
+    
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .contactInSmall {
+        width: 70vw;
+        height: 25px;
+    
+        border-radius: 5px;
+    }
+    
+    .contactInBig {
+        width: 70vw;
+        height: 200px;
+    
+        border-radius: 5px;
+    }
+
+    .contactInfo {
+        width: 80vw;
+        height: 20vh;
+    
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+  }
